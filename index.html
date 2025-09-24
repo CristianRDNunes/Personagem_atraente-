@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personagem Atraente</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+        }
+        .container {
+            max-width: 600px;
+        }
+        .card {
+            background-color: #ffffff;
+            border-radius: 1rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            padding: 2rem;
+        }
+        .input-group label {
+            font-weight: 500;
+            color: #1f2937;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        .input-group input, .input-group textarea, .input-group select {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #d1d5db;
+            border-radius: 0.5rem;
+            font-size: 1rem;
+            color: #1f2937;
+            background-color: #f9fafb;
+            transition: all 0.2s ease-in-out;
+        }
+        .input-group input:focus, .input-group textarea:focus, .input-group select:focus {
+            outline: none;
+            border-color: #2563eb;
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+        }
+        .btn {
+            background-color: #2563eb;
+            color: #ffffff;
+            font-weight: 600;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.75rem;
+            transition: all 0.2s ease-in-out;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #1e40af;
+        }
+    </style>
+</head>
+<body class="p-6">
+    <div class="container mx-auto">
+        <form id="attractForm" class="card space-y-6" action="https://formspree.io/f/mjkakgga" method="POST">
+            <h1 class="text-3xl font-bold text-center text-gray-800">Construindo seu Personagem Atraente</h1>
+            <p class="text-center text-gray-600 mb-6">Vamos definir sua identidade, histórias e mensagem para se conectar com seu público de forma autêntica.</p>
+
+            <div class="input-group">
+                <label for="niche">Qual é o seu nicho ou área de atuação?</label>
+                <input type="text" id="niche" name="Nicho" required>
+            </div>
+            
+            <h2 class="text-2xl font-semibold text-gray-700">1. Identificação dos Elementos</h2>
+            
+            <div class="input-group">
+                <label for="stories">Liste três histórias de progresso da sua vida ou carreira.</label>
+                <p class="text-sm text-gray-500 mt-1">Detalhe cada uma com Cenário, Conflito, Solução e Lição aprendida.</p>
+                <textarea id="stories" name="Histórias de Progresso" rows="5" required></textarea>
+            </div>
+            
+            <div class="input-group">
+                <label for="parables">Pense em duas parábolas que possam ilustrar pontos importantes.</label>
+                <p class="text-sm text-gray-500 mt-1">Uma parábola é uma história curta que transmite uma lição de forma impactante.</p>
+                <textarea id="parables" name="Parábolas" rows="3" required></textarea>
+            </div>
+            
+            <div class="input-group">
+                <label for="flaw">Liste uma falha de caráter sua que demonstre sua humanidade.</label>
+                <p class="text-sm text-gray-500 mt-1">Isso inspira empatia e cria uma conexão genuína com o público.</p>
+                <textarea id="flaw" name="Falha de Caráter" rows="3" required></textarea>
+            </div>
+            
+            <div class="input-group">
+                <label for="opinion">Escolha uma opinião ou posição polarizadora que você está disposto a compartilhar.</label>
+                <p class="text-sm text-gray-500 mt-1">Escolha algo alinhado aos seus valores e que desafie crenças comuns do seu nicho.</p>
+                <textarea id="opinion" name="Opinião Polarizadora" rows="3" required></textarea>
+            </div>
+            
+            <h2 class="text-2xl font-semibold text-gray-700">2. Escolha da Identidade</h2>
+            
+            <div class="input-group">
+                <label for="identity">Qual dessas identidades mais combina com você?</label>
+                <select id="identity" name="Identidade" required>
+                    <option value="">Selecione uma opção...</option>
+                    <option value="Líder">Líder – Ensina, inspira e guia outros com sua experiência.</option>
+                    <option value="Aventureiro/Guerreiro">Aventureiro/Guerreiro – Aprende na prática, enfrenta desafios e compartilha suas descobertas.</option>
+                    <option value="Repórter/Evangelista">Repórter/Evangelista – Investiga, reúne informações e compartilha conhecimento com os outros.</option>
+                    <option value="Herói Relutante">Herói Relutante – Nunca planejou ser referência, mas acabou se tornando um exemplo.</option>
+                </select>
+                <p class="text-sm text-gray-500 mt-2">Descreva a sua experiência ou o momento que se encaixa na identidade escolhida.</p>
+                <textarea id="identity-details" name="Detalhes da Identidade" rows="3" required></textarea>
+            </div>
+
+            <h2 class="text-2xl font-semibold text-gray-700">3. Criação da História</h2>
+            
+            <div class="input-group">
+                <label for="story-plot">Escolha um dos enredos abaixo para contar sua jornada:</label>
+                <select id="story-plot" name="Enredo da História" required>
+                    <option value="">Selecione uma opção...</option>
+                    <option value="Antes e Depois">Antes e Depois – Sua transformação pessoal ou profissional.</option>
+                    <option value="Perda e Redenção">Perda e Redenção – Algo que deu errado e como você superou.</option>
+                    <option value="Descoberta Incrível">Descoberta Incrível – Um insight que mudou sua vida.</option>
+                    <option value="Revelação de Segredo">Revelação de Segredo – Algo que poucas pessoas sabem e você pode compartilhar.</option>
+                    <option value="Depoimento de Terceiros">Depoimento de Terceiros – Alguém que validou sua experiência.</option>
+                    <option value="Nós Contra Eles">Nós Contra Eles – Se posicionar contra algo que não acredita.</option>
+                </select>
+            </div>
+
+            <h2 class="text-2xl font-semibold text-gray-700">4. Aplicação no Negócio</h2>
+            
+            <div class="input-group">
+                <label for="channels">Identifique dois canais de comunicação onde você pode compartilhar suas histórias.</label>
+                <p class="text-sm text-gray-500 mt-1">Exemplos: redes sociais, e-mails, webinars, YouTube, podcasts, blog.</p>
+                <textarea id="channels" name="Canais de Comunicação" rows="3" required></textarea>
+            </div>
+            
+            <div class="input-group">
+                <label for="intro-message">Crie uma breve mensagem de introdução que reflita sua identidade.</label>
+                <p class="text-sm text-gray-500 mt-1">Inclua um dos elementos que definimos e use um enredo atraente para se apresentar ao seu público.</p>
+                <textarea id="intro-message" name="Mensagem de Introdução" rows="5" required></textarea>
+            </div>
+
+            <div class="flex justify-center mt-8">
+                <button type="submit" class="btn">Enviar Respostas</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
